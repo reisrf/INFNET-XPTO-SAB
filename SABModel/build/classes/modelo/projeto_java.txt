@@ -1,0 +1,44 @@
+Abaixo seguem as tarefas que devemos concluir até dia 30/04
+
+Quanto a apresentação e a documentação podemos utilizar a que já existe pois esta bem detalhada, adaptaremos apenas 
+os textos e os power points, concordam? 
+
+
+1. Definir um modelo de domínio, para o cenário apresentado, utilizando DDD.
+O modelo proposto já existe, foi o apresentado em sala no trabalho do professor Érico.
+
+
+
+2. Fazer o mapeamento objeto-relacional utilizando JPA.
+Já iniciei esta implementação.
+
+
+3. Utilizar EJBs para criação dos componentes que encapsulam persistência e regras de negócio.
+Podemos criar esta parte do projeto juntos nesta próxima semana, talvez na quinta feira no Infnet.
+
+
+
+
+4. Criar a camada de apresentação com JSF 2.0.
+
+Pessoal abaixo listei as telas do projeto vejam se concordam,creio que o Robson possa ajudar nesta tarefa.
+
+cadastrar cliente
+cadastrar produto
+contratra produto
+-solicitar contratacao
+-aprovar contratacao
+
+tela única com dois filtros(cliente,pendencia de aprovação)
+listar produtos por cliente
+listar produtos pendentes de aprovacao
+
+
+operacoes do cliente:
+uma tela com diversos botoes
+-sacar
+-depositar
+-transferir
+-aplicar
+-resgatar
+cada click nos botões leverá as telas específicas de cada operacao
