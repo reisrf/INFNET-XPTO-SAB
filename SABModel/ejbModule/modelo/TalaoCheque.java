@@ -7,4 +7,6 @@ import javax.persistence.*;
 @Table
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class TalaoCheque extends Produto {
+
+/* alteração 2*/
 }
