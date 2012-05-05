@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:composition template="/template.xhtml">
+		<ui:define name="principal">
+			<h:form>
+				<h3>Dados do Cliente</h3>
+				<h:panelGrid columns="3">
+					<h:outputText value="Nome" />
+					<h:inputText id="nome" value="#{cadastroBean.nome}" required="true" requiredMessage="Campo Obrigatório" />
+					<h:message for="nome" />
+					<h:outputText value="CPF" />
+					<h:inputText id="cpf" value="#{cadastroBean.cpf}" required="true" requiredMessage="Campo Obrigatório" converterMessage="Apenas Números">
+						<f:convertNumber pattern="#"/>
+					</h:inputText>
+					<h:message for="cpf" />
+					<h:outputText value="Renda" />
+					<h:inputText id="renda" value="#{cadastroBean.renda}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="renda" />
+					<h:outputText value="Sexo" />
+					<h:inputText id="sexo" value="#{cadastroBean.sexo}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="sexo" />
+					<h:outputText value="dataNascimento" />
+					<h:inputText id="dataNascimento" value="#{cadastroBean.login}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="dataNascimento" />
+				</h:panelGrid>
+				<h3>Endereço do Cliente</h3>
+				<h:panelGrid columns="3">
+					<h:outputText value="Logradouro" />
+					<h:inputText id="logradouro" value="#{cadastroBean.logradouro}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="logradouro" />
+					<h:outputText value="Complemento" />
+					<h:inputText id="complemento" value="#{cadastroBean.complemento}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="complemento" />
+					<h:outputText value="Estado" />
+					<h:inputText id="estado" value="#{cadastroBean.estado}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="estado" />
+					<h:outputText value="Cidade" />
+					<h:inputText id="cidade" value="#{cadastroBean.cidade}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="cidade" />
+					<h:outputText value="CEP" />
+					<h:inputText id="cep" value="#{cadastroBean.cep}" required="true" requiredMessage="Campo Obrigatório"  />
+					<h:message for="cep" />
+				</h:panelGrid>
+				<hr/>
+				<h:commandButton action="#{cadastroBean.cadastrar}" value="Salvar" />
+				<h:messages globalOnly="true"/>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html> 

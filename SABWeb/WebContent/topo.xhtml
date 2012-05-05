@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+	<head>
+	</head>
+	
+	<body>
+		
+		<h1>Banco Norne - SAB - Sistema de Automação Bancária</h1>
+		<hr/>
+		<h:form>
+			<h:panelGrid columns="5" cellpadding="4" cellspacing="2">
+				<h:link outcome="principal.xhtml" value="Principal"></h:link>
+				<h:commandLink value="Login" action="#{loginBean.abrirLogin}" />
+				<h:link outcome="Clientes.xhtml" value="Clientes"></h:link>
+				<h:link outcome="Produtos.xhtml" value="Produtos"></h:link>
+			</h:panelGrid>
+		</h:form>
+		<hr/>
+		
+	</body>
+		
+</html>

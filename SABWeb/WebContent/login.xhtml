@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<ui:composition template="/template.xhtml">
+		<ui:define name="principal">			
+			<h:form>
+				<h3>Login de Usuário</h3>
+				<h:panelGrid columns="2">
+					<h:outputText value="Login" />
+					<h:inputText value="#{loginBean.login}"  />
+					<h:outputText value="Senha" />
+					<h:inputSecret value="#{loginBean.senha}" />					
+				</h:panelGrid>
+				<hr/>
+				<h:commandButton action="#{loginBean.logar}" value="OK" /> <h:messages />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>
