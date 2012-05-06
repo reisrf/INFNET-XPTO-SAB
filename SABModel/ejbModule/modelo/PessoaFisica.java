@@ -8,6 +8,11 @@ import javax.validation.constraints.NotNull;
 @Table
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class PessoaFisica extends Cliente {
+
+	@NotNull
+	public String login;
+	@NotNull
+	public String senha;
 	@NotNull
 	public String cpf;
 	@NotNull
@@ -19,12 +24,26 @@ public class PessoaFisica extends Cliente {
 	@NotNull
 	public Date dataNascimento;
 	public List<Dependente> dependentes;
+	@Embedded
+	public Endereco endereco;
 
 	@Override
 	public String toString() {
 		return "PessoaFisica [cpf=" + cpf + ", nome=" + nome + ", renda="
 				+ renda + ", sexo=" + sexo + ", dataNascimento="
 				+ dataNascimento + ", dependentes=" + dependentes + "]";
+	}
+
+	public PessoaFisica(String nome, String cpf, String renda, char sexo,
+			Date datanascimento, String login, String senha) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.renda = renda;
+		this.sexo = sexo;
+		this.dataNascimento = datanascimento;
+		this.login = login;
+		this.senha = senha;
 	}
 
 	public String getCpf() {
@@ -73,6 +92,30 @@ public class PessoaFisica extends Cliente {
 
 	public void setDependentes(List<Dependente> dependentes) {
 		this.dependentes = dependentes;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 }

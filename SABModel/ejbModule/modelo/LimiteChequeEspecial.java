@@ -5,6 +5,11 @@ import javax.persistence.*;
 @Entity
 @Table
 public class LimiteChequeEspecial extends Produto {
+	
+	public LimiteChequeEspecial() {
+		super();
+	}
+
 	public String valor;
 
 	@Override

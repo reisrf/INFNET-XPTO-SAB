@@ -6,7 +6,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-
 public class PessoaJuridica extends Cliente {
 	@NotNull
 	public String cnpj;
@@ -19,6 +18,13 @@ public class PessoaJuridica extends Cliente {
 	public String toString() {
 		return "PessoaJuridica [cnpj=" + cnpj + ", razaoSocial=" + razaoSocial
 				+ ", faturamento=" + faturamento + "]";
+	}
+
+	public PessoaJuridica(String cnpj, String razaoSocial, String faturamento) {
+		super();
+		this.cnpj = cnpj;
+		this.razaoSocial = razaoSocial;
+		this.faturamento = faturamento;
 	}
 
 	public String getCnpj() {

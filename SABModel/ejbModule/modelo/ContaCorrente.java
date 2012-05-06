@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class ContaCorrente extends Produto {
 	@NotNull
-	public String numero;
+	public int numero;
 	@NotNull
 	public String saldo;
 
@@ -17,11 +17,16 @@ public class ContaCorrente extends Produto {
 		return "ContaCorrente [numero=" + numero + ", saldo=" + saldo + "]";
 	}
 
-	public String getNumero() {
+	public ContaCorrente(int numero, String saldo) {
+		this.numero = numero;
+		this.saldo = saldo;
+	}
+
+	public int getNumero() {
 		return numero;
 	}
 
-	public void setNumero(String numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 

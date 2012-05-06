@@ -14,6 +14,8 @@ public abstract class Produto {
 
 	public Status status;
 
+	public TipoProduto tipo;
+
 	public int getId() {
 		return id;
 	}
@@ -30,7 +32,19 @@ public abstract class Produto {
 		this.status = status;
 	}
 
+	public TipoProduto getTipoProduto() {
+		return tipo;
+	}
+
+	public void setTipoProduto(TipoProduto tipoProduto) {
+		this.tipo = tipoProduto;
+	}
+
 	public enum Status {
 		ATIVO, INATIVO
+	}
+
+	public enum TipoProduto {
+		CONTACORRENTE, CONTAPOUPANCA
 	}
 }

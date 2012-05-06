@@ -16,6 +16,7 @@ public abstract class Cliente implements Serializable {
 	@Embedded
 	private Endereco endereco;
 
+		
 	public void setId(int id) {
 		this.id = id;
 	}

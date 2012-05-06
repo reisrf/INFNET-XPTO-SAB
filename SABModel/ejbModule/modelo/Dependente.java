@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 @Table
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Dependente {
+
 	@NotNull
 	public String cpf;
 	@NotNull
@@ -22,6 +23,13 @@ public class Dependente {
 				+ ", dataNascimento=" + dataNascimento + "]";
 	}
 
+	public Dependente(String cpf, String nome, Date dataNascimento) {
+		super();
+		this.cpf = cpf;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+	}
+	
 	public String getCpf() {
 		return cpf;
 	}
